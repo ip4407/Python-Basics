@@ -1,0 +1,9 @@
+readline()
+Read and return a single logical line from the current file (or from an internal buffer if lines have previously been
+“unread” with unreadline()).
+If the join_lines option is true, this may involve reading multiple physical lines concatenated into a single string.
+
+Updates the current line number, so calling warn() after readline()
+emits a warning about the physical line(s) just read.
+
+Returns None on end-of-file, since the empty string can occur if rstrip_ws is true but strip_blanks is not.
